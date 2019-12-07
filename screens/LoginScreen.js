@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
 import * as firebase from "firebase";
 
 export default class LoginScreen extends React.Component {
+    static navigationOptions = {
+        header: null
+    };
     state = {
         email: "",
         password: "",
@@ -21,7 +24,15 @@ export default class LoginScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.greeting}>{`Welcome to\n Speed Fast`}</Text>
+                            <Image
+                    source={require("../assets/logo.png")}
+                    style={{ marginTop: -176, marginLeft: -20 }}
+                ></Image>
+                <Image
+                    source={require("../assets/authFooter.png")}
+                    style={{ position: "absolute", bottom: -225, right: -185 }}
+                ></Image>
+                <Text style={styles.greeting}>{`Welcome to Send Money Fast`}</Text>
 
                 <View style={styles.errorMessage}>
                     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
@@ -59,7 +70,7 @@ export default class LoginScreen extends React.Component {
                     onPress={() => this.props.navigation.navigate("Register")}
                 >
                     <Text style={{ color: "#414959", fontSize: 13 }}>
-                        New to SpeedFast? <Text style={{ fontWeight: "500", color: "#E9446A" }}>Sign Up</Text>
+                        New to Send Money Fast? <Text style={{ fontWeight: "500", color: "#E9446A" }}>Sign Up</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -107,7 +118,7 @@ const styles = StyleSheet.create({
     },
     button: {
         marginHorizontal: 30,
-        backgroundColor: "#E9446A",
+        backgroundColor: "#0D77CE",
         borderRadius: 4,
         height: 52,
         alignItems: "center",

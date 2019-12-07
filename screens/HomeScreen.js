@@ -1,11 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
 import * as firebase from "firebase";
-import MeesageScreen from "./MessageScreen";
-import { Ionicons } from "@expo/vector-icons";
-import { Header } from "react-navigation-stack";
-import { TouchableHighlight } from "react-native-gesture-handler";
-
 
 export default class HomeScreen extends React.Component {
   state = {
@@ -110,7 +105,6 @@ static navigationOptions = ({ navigation }) => ({
 <Text style={styles.recentTransferTitle}>Recent Transactions </Text>
 </View>
 
-
 <View style={styles.recentTransferMoney}>
 <Image style={styles.transferToImage} source={require("../assets/cart1.png")}></Image> 
 <Text style={styles.transferToName}>Food</Text>
@@ -132,12 +126,7 @@ static navigationOptions = ({ navigation }) => ({
 <Text style={styles.transferAmount}>-$630.00</Text>
 </View>
 </View>
-
-
 </ScrollView> 
-
-
-  
   );
   }
 }
@@ -213,12 +202,8 @@ const styles = StyleSheet.create({
           paddingVertical: 5,
           position: 'relative',
           top: 40,
-
           paddingLeft: 20,
-          // backgroundColor: "#f2f2f2",
-          // shadowOpacity: 3,
           bottom: 30,
-
     },
     headerSubtitle: {
       fontSize: 28,
@@ -241,7 +226,6 @@ const styles = StyleSheet.create({
       borderRadius: 15,
       paddingLeft: 10,
       margin: 10,
-      // shadowOpacity: 3,
       width: 330,
       height: 200,
     },
@@ -253,7 +237,6 @@ const styles = StyleSheet.create({
       borderRadius: 15,
       paddingLeft: 10,
       margin: 10, 
-      // shadowOpacity: 3,
       width: 330,
       height: 200,
     },
@@ -265,7 +248,6 @@ const styles = StyleSheet.create({
       borderRadius: 15,
       paddingLeft: 10,
       margin: 10,
-      // shadowOpacity: 3,
       width: 330,
       height: 200,
     },
@@ -314,9 +296,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       justifyContent: "center",
       alignItems: "center",
-      // top: 100,
-      color: "white",
-      
+      color: "white", 
     },
     description: {
       fontSize: 22,
@@ -335,20 +315,13 @@ const styles = StyleSheet.create({
       fontSize: 20,
       paddingHorizontal: 20,
     },
-  //   cardContainer: {
-  //  backgroundColor: "blue",
-  //   },
     detailsContainer: {
       flex: 2,
-      // borderBottomWidth: StyleSheet.hairlineWidth,
-      // borderBottomColor: "grey",
-      // backgroundColor: 'transparent',
       position: 'relative',
       backgroundColor: "grey",
       width: 420,
       height: 200,
       top: 60,
-
     },
     scrollContainer: {
       position: 'relative',
@@ -383,8 +356,6 @@ const styles = StyleSheet.create({
       width: 80,
       height: 80,
       borderRadius: 40,
-      // borderColor: 'red',
-      // borderWidth: 1,
       justifyContent: 'center',
       margin: 10,
       position: 'absolute',
@@ -415,21 +386,15 @@ const styles = StyleSheet.create({
       transferToImage: {
           width: 60,
           height: 60,
-          // borderRadius: 30,
-          // borderColor: 'red',
-          // borderWidth: 1,
-          // justifyContent: 'center',
-          // margin: 10,
           position: 'absolute',
           marginLeft: 15,
           top: 6
           },
-      
       firstScrollViewImage: {
           paddingLeft: 10,
       },
       recentTransferMoney: {
-          // borderWidth: 2,
+        marginHorizontal: 20, 
           flexDirection: "row",
           height: 74,
           borderRadius: 25,
@@ -470,54 +435,3 @@ const styles = StyleSheet.create({
         top: 2,
       }
 });
-
-
-
-
-{/* <View style={styles.UserContainer}>
-<Image style={styles.image}
-      source={require("../assets/visa1.jpg")} />
-
-</View> */}
-
-
-
-
-{/* <View style={styles.hotelContainer}>
-      <Image style={styles.image}
-      source={require("../assets/visa1.jpg")} />
-  <View>
-  <Text style={styles.subtitle}>6500 2199 7878 7878</Text>
-  <Text style={styles.subtitle}>Ariel Smith</Text>
-  <Text style={styles.subtitle}>01 08</Text>
-</View>
-</View> */}
-
-
-
-
-//  <View style={styles.container}> 
-// <Text style={styles.displayName}>Welcome{this.state.displayName}!</Text> 
-// <TouchableOpacity style={styles.userName} onPress={this.signOutUser}>
-//     <Text>Logout</Text>
-//     <Image style={{marginLeft:5, height:22, width: 22}} source={require('../assets/logout.png')} />
-// </TouchableOpacity> 
-// </View> 
-
-
-
-
-  // static navigationOptions = () => ({
-  //     title: "FGFHJ",
-  //     HeaderStyle: {
-  //         backgroundColor: "grey"
-  //     },
-  //     HeaderTintColor: "fffff",
-  //     headerTitleStyle:{
-  //         fontWeight: 'bold'
-  //     },
-  // }
-  //     );
-  
-  
-    
