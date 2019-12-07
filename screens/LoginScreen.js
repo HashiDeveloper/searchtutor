@@ -26,7 +26,7 @@ export default class LoginScreen extends React.Component {
             <View style={styles.container}>
                             <Image
                     source={require("../assets/logo.png")}
-                    style={{ marginTop: -176, marginLeft: -20 }}
+                    style={{ marginTop: -206, marginLeft: -20 }}
                 ></Image>
                 <Image
                     source={require("../assets/authFooter.png")}
